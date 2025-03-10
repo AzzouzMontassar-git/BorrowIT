@@ -22,6 +22,8 @@ public class Request {
 
     @ManyToOne
     private Item item;
+    @OneToOne
+    private Discount discount;
 
 public enum RequestStatus {
         PENDING, ACCEPTED, REJECTED

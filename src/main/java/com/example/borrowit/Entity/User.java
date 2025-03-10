@@ -36,9 +36,6 @@ public class User {
     @OneToMany(mappedBy = "user")
     private Set<Feedback> feedbacks;
 
-    @OneToMany(mappedBy = "user")
-    private Set<Payment> payments;
-
     @OneToMany(mappedBy = "borrower")
     private Set<Contract> borrowedContracts;
 

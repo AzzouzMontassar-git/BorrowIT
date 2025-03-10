@@ -20,8 +20,8 @@ public class Payment {
     @Enumerated(EnumType.STRING)
     private PaymentStatus status;
 
-    @ManyToOne
-    private User user;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Contract contract;
 
     public enum PaymentStatus {
         PENDING, COMPLETED, FAILED

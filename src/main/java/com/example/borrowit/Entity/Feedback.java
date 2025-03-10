@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Data
@@ -18,5 +19,7 @@ public class Feedback {
     private LocalDateTime date;
 
     @ManyToOne
-    private User user;
+    private Item item;
+    @OneToMany
+    private Set<Reacts> reacts;
 }

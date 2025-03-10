@@ -22,8 +22,9 @@ public class Discount {
 
     private LocalDateTime endDate;
 
-    @ManyToOne
-    private Item item;
+    @OneToOne
+    private Request request;
+
 
     public enum Name {
         BLACK_FRIDAY, VALENTINES_DAY, ANNIVERSARY, SPECIAL

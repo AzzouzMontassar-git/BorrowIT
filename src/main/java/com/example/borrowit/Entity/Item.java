@@ -24,11 +24,8 @@ public class Item {
     @ManyToOne
     private Category category;
 
-    @OneToMany(mappedBy = "item")
-    private Set<Review> reviews;
-
-    @OneToMany(mappedBy = "item")
-    private Set<Request> requests;
+   @OneToMany
+   private Set<Feedback> feedbacks;
 
     @OneToMany(mappedBy = "item")
     private Set<Discount> discounts;

@@ -25,6 +25,6 @@ public class Contract {
     @ManyToOne
     private User owner;
 
-    @ManyToOne
-    private Item item;
+    @OneToOne
+    private Payment payment;
 }
