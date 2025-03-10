@@ -27,9 +27,6 @@ public class Item {
    @OneToMany
    private Set<Feedback> feedbacks;
 
-    @OneToMany(mappedBy = "item")
-    private Set<Discount> discounts;
 
-    @OneToMany(mappedBy = "item")
-    private Set<Contract> contracts;
+
 }

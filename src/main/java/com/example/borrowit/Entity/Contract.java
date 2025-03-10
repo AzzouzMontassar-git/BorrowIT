@@ -1,8 +1,8 @@
 package com.example.borrowit.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.time.LocalDateTime;
 
 @Entity
@@ -25,6 +25,13 @@ public class Contract {
     @ManyToOne
     private User owner;
 
-    @OneToOne
+    @OneToOne(mappedBy = "contract", cascade = CascadeType.ALL)
+    @JsonIgnore
     private Payment payment;
+
+    @Column(length = 500)
+    private String borrowerSignaturePath;
+
+    @Column(length = 500)
+    private String ownerSignaturePath;
 }

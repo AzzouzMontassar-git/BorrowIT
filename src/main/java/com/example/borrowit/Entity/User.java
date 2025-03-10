@@ -33,8 +33,7 @@ public class User {
     @OneToMany(mappedBy = "user")
     private Set<Review> reviews;
 
-    @OneToMany(mappedBy = "user")
-    private Set<Feedback> feedbacks;
+
 
     @OneToMany(mappedBy = "borrower")
     private Set<Contract> borrowedContracts;
